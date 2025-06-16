@@ -1,24 +1,48 @@
-import React from 'react'
-
+import React from "react";
+import styles from "./navbar.module.css";
 const Navbar = () => {
   return (
     <>
-    <section>
-        <nav className='bg-[#2B2B2B] flex justify-between align-center items-center  h-[40px] px-[20px] py-[4px]'>
-            <div className='text-[#FFFFFF] font-bold text-[20px] '>
-                logo
-            </div>
-            <div className='lg:hidden  '>
-                <img src="./icon _menu_.png" alt=""  className='   '/>
-            </div>
+      <section>
+        <nav className="bg-[#2B2B2B] flex justify-between align-center items-center  h-[40px] px-[20px] py-[4px]">
+          <div className="text-[#FFFFFF] font-bold text-[20px] ">logo</div>
+          <div className="lg:hidden  ">
+            <img src="./icon _menu_.png" alt="" className="   " />
+          </div>
         </nav>
-        {/* Hero */}
-        <div>
-
-        </div>
-    </section>
+      </section>
+      {/* Hero section */}
+      <main>
+        <section className="">
+          {/* Div of gradient color */}
+          <div className={styles.navbarGradient}>
+            {/* Hero Text */}
+            <div className="pt-[80px] px-5">
+              <h1 className="text-[24px] text-white font-medium">We Provide</h1>
+              <h1 className="text-[24px]  text-white font-medium">
+                Architectural design
+              </h1>
+              <h1 className="text-[24px]  text-white font-medium">
+                and Construction{" "}
+              </h1>
+              <p className="text-[14px] pt-[8px] pb-[16px] text-[#C4C4C4] ">
+                ​More than 100 building and housing projects that we have built.
+                The building owner chose us over other contractors in Jakarta,
+                because our work is different
+              </p>
+              <button class="text-white px-4 py-2 rounded-lg bg-gradient-to-r from-sky-300 to-blue-700">
+                Discover more
+              </button>
+            </div>
+            {/* Hero Image */}
+            <div className="flex justify-end -mt-36">
+              <img src="./HeroImage.png" alt="building image" />
+            </div>
+          </div>
+        </section>
+      </main>
     </>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

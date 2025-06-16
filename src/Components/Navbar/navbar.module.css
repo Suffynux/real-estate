@@ -1,0 +1,7 @@
+.navbarGradient {
+  background-image: linear-gradient(to right, #222222, #474747);
+}
+
+.div{
+    background-color: red !important;
+}
