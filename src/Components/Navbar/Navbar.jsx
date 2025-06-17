@@ -41,6 +41,53 @@ const Navbar = () => {
           </div>
         </section>
       </main>
+      {/* Stats */}
+      <section className={`${styles.heroGradient} shadow-2xl `} >
+        <div className=" text-white">
+          {/* first part */}
+          <div className="flex justify-between px-[24px] py-[20px]">
+            <div>
+              <h2 className="text-[36px] font-bold">
+                25 <span className="text-[14px] font-medium">years</span>
+              </h2>
+            </div>
+
+            <div>
+              <div className="text-[#FFFFFF] font-bold text-[20px] ">logo</div>
+            </div>
+          </div>
+          {/* second part */}
+          <div >
+            <p className="px-[24px] text-sm font-light">
+              As a trusted general project that has been operating for 25 years,
+              our commitment is always to prioritize our client satisfaction.
+            </p>
+          </div>
+          <div className="px-[24px] py-[20px] flex justify-between">
+            <div className="flex flex-col">
+              <h1 className="text-[24px] font-medium">300+</h1>
+              <p className="text-[12px] font-normal">
+                Happy <br />
+                Clients
+              </p>
+            </div>
+            <div className="flex flex-col">
+              <h1 className="text-[24px] font-medium">900+</h1>
+              <p className="text-[12px] font-normal">
+                Projects <br />
+                Completed
+              </p>
+            </div>
+            <div className="flex flex-col">
+              <h1 className="text-[24px] font-medium">20+</h1>
+              <p className="text-[12px] font-normal">
+                Awards <br />
+                Winings
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 };

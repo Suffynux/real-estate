@@ -2,6 +2,10 @@
   background-image: linear-gradient(to right, #222222, #474747);
 }
 
+.heroGradient {
+  background-image: linear-gradient(to right, #399FD8, #0775B4 , #003756);
+}
+
 .div{
     background-color: red !important;
 }
