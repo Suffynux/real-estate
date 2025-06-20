@@ -5,9 +5,9 @@ const Footer = () => {
     <>
       <section className="">
         <footer
-          className={`${styles.navbarGradient} pb-[115px] text-white p-5`}
+          className={`${styles.navbarGradient} pb-[115px] text-white p-5 md:flex md:gap-[140px] md:pt-[80px] md:pl-[130px] `}
         >
-          <div className="flex flex-col gap-7">
+          <div className="flex flex-col gap-7 max-w-[550px] ">
             <h4>Logo</h4>
             <p>
               is a general contractor company based in Jakarta. More than 25
@@ -34,8 +34,8 @@ const Footer = () => {
 
           {/*footer links */}
 
-          <div className="flex flexc-row gap-9 pt-[40px]">
-            <div className="flex flex-col gap-3">
+          <div className="flex flex-row gap-9 pt-[40px]">
+            <div className="flex flex-col gap-3 ">
               <h2 className="text-[20px] font-extrabold">Company</h2>
               <p
                 className="text-md font-medium border-b-2 border-transparent hover:border-b-2 hover:border-black cursor-pointer

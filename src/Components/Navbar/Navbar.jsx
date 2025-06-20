@@ -30,7 +30,7 @@ const Navbar = () => {
                 The building owner chose us over other contractors in Jakarta,
                 because our work is different
               </p>
-              <button class="text-white px-4 py-2 rounded-lg bg-gradient-to-r from-sky-300 to-blue-700">
+              <button className="text-white px-4 py-2 rounded-lg bg-gradient-to-r from-sky-300 to-blue-700">
                 Discover more
               </button>
             </div>
