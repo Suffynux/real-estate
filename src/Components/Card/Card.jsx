@@ -4,12 +4,12 @@ const Card = ({ src, title, description, alt, index }) => {
   return (
     <div
       key={index}
-      className="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow duration-300 min-w-[200px]"
+      className="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow duration-300 min-w-[200px] md:w-[500px] md:h-[450px]"
     >
       <img
         src={src}
         alt={alt}
-        className="w-full h-48 object-cover"
+        className="w-full h-48 object-cover pt-3 rounded-3xl"
       />
 
       <div className="p-4">

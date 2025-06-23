@@ -19,16 +19,16 @@ const Hero = () => {
     {
       src: "/cardImage.png",
       alt: "Card Image",
-      title: "Industrial",
+      title: "Commercial",
       description:
-        "Industrial development is our main line of business. We do Factory Construction, Warehouse and others",
+        "Our experience building in the Commercial field includes Showrooms,Supermalls and Office Buildings"
     },
     {
       src: "/cardImage.png",
       alt: "Card Image",
-      title: "Industrial",
+      title: "Resedential",
       description:
-        "Industrial development is our main line of business. We do Factory Construction, Warehouse and others",
+        "Residential development is the beginning that has shaped us to this day. Our development includes Houses & Apartments"
     },
   ];
 
@@ -104,7 +104,7 @@ const Hero = () => {
             </div>
           </div>
           {/* Card Images */}
-          <div className="py-4 px-[20px] flex gap-5">
+          <div className="py-4 px-[20px] flex gap-5 ">
             {cardImages.map((card, index) => {
               return (
                 <Card
