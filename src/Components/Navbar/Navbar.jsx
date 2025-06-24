@@ -1,34 +1,58 @@
-import React from "react";
+import React ,{useState} from "react";
 import styles from "./navbar.module.css";
 
 const Navbar = () => {
+   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
-      {/* Navbar Section */}
+    <nav>
+           {/* Navbar Section */}
       <section className="bg-[#2B2B2B]">
         <div className="max-w-[1200px] mx-auto">
-          <nav className="flex justify-between items-center h-[40px] px-[20px] py-[4px]">
-            <div className="text-[#FFFFFF] font-bold text-[20px]">logo</div>
-            <div className="hidden md:block">
-              <ul className="flex lg:gap-[80px] text-[#C4C4C4] md:gap-5">
-                <li>Home</li>
-                <li>Servies</li>
-                {/* Below here */}
-                <li>Find a team</li>
-                {/* team section */}
-                <li>About Us</li>
-                {/* We will show  project collection here */}
-                <li>Porfolio</li>
-                {/* Last section */}
+          <nav className="flex justify-between items-center h-[60px] px-4">
+            <div className="text-white font-bold text-2xl cursor-pointer">Logo</div>
 
-              </ul>
-            </div>
+            {/* Desktop Menu */}
+            <ul className="hidden md:flex gap-8 text-[#C4C4C4]">
+              <li className="cursor-pointer hover:text-white">Home</li>
+              <li className="cursor-pointer hover:text-white">Services</li>
+              <li className="cursor-pointer hover:text-white">Find a Team</li>
+              <li className="cursor-pointer hover:text-white">About Us</li>
+              <li className="cursor-pointer hover:text-white">Portfolio</li>
+            </ul>
+
+            {/* Mobile Menu Icon */}
             <div className="md:hidden">
-              <img src="./icon _menu_.png" alt="Menu" className="" />
+              <button onClick={() => setIsOpen(true)}>
+                <img src="./icon _menu_.png" alt="Menu" className="w-6 h-6" />
+              </button>
             </div>
           </nav>
         </div>
       </section>
+
+      {/* Mobile Side Panel */}
+      <div
+        className={`fixed top-0 right-0 w-[70%] h-full bg-[#1f1f1f] text-white transform ${
+          isOpen ? "translate-x-0" : "translate-x-full"
+        } transition-transform duration-300 ease-in-out z-50`}
+      >
+        <div className="flex justify-between items-center p-4 border-b border-gray-600">
+          <h2 className="text-xl font-semibold">Menu</h2>
+          <button onClick={() => setIsOpen(false)} className="text-2xl">
+            &times;
+          </button>
+        </div>
+        <ul className="flex flex-col gap-6 p-4 text-lg">
+          <li onClick={() => setIsOpen(false)} className="cursor-pointer">Home</li>
+          <li onClick={() => setIsOpen(false)} className="cursor-pointer">Services</li>
+          <li onClick={() => setIsOpen(false)} className="cursor-pointer">Find a Team</li>
+          <li onClick={() => setIsOpen(false)} className="cursor-pointer">About Us</li>
+          <li onClick={() => setIsOpen(false)} className="cursor-pointer">Portfolio</li>
+        </ul>
+      </div>
+    </nav>
+      
 
       {/* Hero Section */}
       <main>
