@@ -10,15 +10,28 @@ const Navbar = () => {
       <section className="bg-[#2B2B2B]">
         <div className="max-w-[1200px] mx-auto">
           <nav className="flex justify-between items-center h-[60px] px-4">
-            <div className="text-white font-bold text-2xl cursor-pointer">Logo</div>
+            <div className="text-white font-bold text-2xl cursor-pointer">
+              <img src="/logo.png" alt="logo imgage" width={250} className="pt-[10px] pb-[10px] hidden md:block" />
+              <img src="/logo.png" alt="logo imgage" width={100} className="pt-[10px] pb-[10px] md:hidden " />
+            </div>
 
             {/* Desktop Menu */}
             <ul className="hidden md:flex gap-8 text-[#C4C4C4]">
-              <li className="cursor-pointer hover:text-white">Home</li>
-              <li className="cursor-pointer hover:text-white">Services</li>
-              <li className="cursor-pointer hover:text-white">Find a Team</li>
-              <li className="cursor-pointer hover:text-white">About Us</li>
-              <li className="cursor-pointer hover:text-white">Portfolio</li>
+              <a href="#home">
+                <li className="cursor-pointer hover:text-[#0775b4]">Home</li>
+              </a>
+              <a href="#services">
+                <li className="cursor-pointer hover:text-[#0775b4]">Services</li>
+              </a>
+              <a href="#our-team">
+                <li className="cursor-pointer hover:text-[#0775b4]">Find a Team</li>
+              </a>
+              <a href="#about-us">
+                <li className="cursor-pointer hover:text-[#0775b4]">About Us</li>
+              </a>
+              <a href="#portfolio">
+                <li className="cursor-pointer hover:text-[#0775b4]">Portfolio</li>
+              </a>
             </ul>
 
             {/* Mobile Menu Icon */}
@@ -43,13 +56,34 @@ const Navbar = () => {
             &times;
           </button>
         </div>
-        <ul className="flex flex-col gap-6 p-4 text-lg">
-          <li onClick={() => setIsOpen(false)} className="cursor-pointer">Home</li>
-          <li onClick={() => setIsOpen(false)} className="cursor-pointer">Services</li>
-          <li onClick={() => setIsOpen(false)} className="cursor-pointer">Find a Team</li>
-          <li onClick={() => setIsOpen(false)} className="cursor-pointer">About Us</li>
-          <li onClick={() => setIsOpen(false)} className="cursor-pointer">Portfolio</li>
-        </ul>
+<ul className="flex flex-col gap-6 p-4 text-lg">
+  <li>
+    <a href="#home" onClick={() => setIsOpen(false)} className="cursor-pointer hover:text-[#0775b4]">
+      Home
+    </a>
+  </li>
+  <li>
+    <a href="#services" onClick={() => setIsOpen(false)} className="cursor-pointer hover:text-[#0775b4]">
+      Services
+    </a>
+  </li>
+  <li>
+    <a href="#our-team" onClick={() => setIsOpen(false)} className="cursor-pointer hover:text-[#0775b4]">
+      Find a Team
+    </a>
+  </li>
+  <li>
+    <a href="#about-us" onClick={() => setIsOpen(false)} className="cursor-pointer hover:text-[#0775b4]">
+      About Us
+    </a>
+  </li>
+  <li>
+    <a href="#portfolio" onClick={() => setIsOpen(false)} className="cursor-pointer hover:text-[#0775b4]">
+      Portfolio
+    </a>
+  </li>
+</ul>
+
       </div>
     </nav>
       
@@ -76,7 +110,7 @@ const Navbar = () => {
                   The building owner chose us over other contractors in Jakarta,
                   because our work is different
                 </p>
-                <button className="text-white px-4 py-2 rounded-lg bg-gradient-to-r from-sky-300 to-blue-700">
+                <button className="text-white px-4 py-2 rounded-lg bg-gradient-to-r from-sky-300 to-blue-700 cursor-pointer">
                   Discover more
                 </button>
                 

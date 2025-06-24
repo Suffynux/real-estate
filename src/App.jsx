@@ -6,17 +6,37 @@ import './App.css'
 import OurStory from './Components/Our Story/OurStory'
 import Collections from './Components/Our Story/Collections'
 import Footer from './Components/Footer/Footer'
+import Team from './Components/Our Team/Team'
+import Services from './Components/Services/Services'
+
+
+
 
 function App() {
 
   return (
  <>
- <Navbar/>
- <Hero/>
- <Quality/>
- <OurStory/>
- <Collections/>
- <Footer/>
+<Navbar />
+<Hero   />
+<section id='services'>
+  <Services />
+  </section>
+<section id='our-team'>
+  <Team />
+
+
+</section>
+<section id='our-qualities'>
+<Quality  />
+</section>
+<section id="about-us">
+
+<OurStory  />
+</section>
+<section id="portfolio">
+  <Collections />
+</section>
+<Footer/>
  </>
   )
 }

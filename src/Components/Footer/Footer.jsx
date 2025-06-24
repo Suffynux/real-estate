@@ -8,7 +8,7 @@ const Footer = () => {
           className={`${styles.navbarGradient} pb-[115px] text-white p-5 md:flex md:gap-[140px] md:pt-[80px] md:pl-[130px] `}
         >
           <div className="flex flex-col gap-7 max-w-[550px] ">
-            <h4>Logo</h4>
+            <img src="./logo.png" alt="Company Logo" width={200} />
             <p>
               is a general contractor company based in Jakarta. More than 25
               years of experience in building and carving out Indonesia's
