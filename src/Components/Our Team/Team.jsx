@@ -1,6 +1,13 @@
 import React from 'react'
 import styles from "./team.module.css";
+import Notification from "../UnderDevelopment/Notification";
+
+
 const Team = () => {
+  const [isNotificationOpen, setIsNotificationOpen] = React.useState(false);
+const handleCloseNotification = () => {
+  setIsNotificationOpen(false);
+};
   return (
     <>
           <section className="flex flex-col lg:flex-row max-w-[1200px] mx-auto px-4">
@@ -45,7 +52,15 @@ const Team = () => {
                   </p>
     
                   <div className="flex justify-between mt-[15px]">
-                    <button className="px-[6px] py-[12px] bg-blue-500 text-white transition-all duration-300 hover:bg-blue-600 hover:scale-105 hover:shadow-md">
+                    {isNotificationOpen && <Notification onClose={handleCloseNotification} />}
+                    <button 
+                    onClick={()=>{
+                       setIsNotificationOpen(true)
+                       setTimeout(()=>{
+                        setIsNotificationOpen(false);
+                       }, 4000);
+                    }}
+                    className="px-[6px] py-[12px] bg-blue-500 text-white transition-all duration-300 hover:bg-blue-600 hover:scale-105 hover:shadow-md">
                       See all team
                     </button>
                     <h1 className="flex items-center gap-4 text-[16px] transition-colors duration-300 hover:text-blue-500">

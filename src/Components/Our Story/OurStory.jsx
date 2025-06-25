@@ -1,6 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
+import Notification from "../UnderDevelopment/Notification";
+
+
 
 const OurStory = () => {
+  const [isNotificationOpen, setIsNotificationOpen] = useState(false);
+const handleCloseNotification = () =>{
+  setIsNotificationOpen(false);
+}
   return (
     <section className="flex items-center justify-center py-12 px-4">
       <div className="flex flex-col items-center md:flex-row-reverse md:justify-between md:items-center gap-8 max-w-[1200px] w-full">
@@ -23,7 +30,19 @@ const OurStory = () => {
             now we are present as a reliable...
           </p>
 
-          <button className="px-6 py-3 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors duration-300">
+          {/* <button className="px-6 py-3 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors duration-300">
+            See all team
+          </button> */}
+          {isNotificationOpen && (
+            <Notification onClose={handleCloseNotification} />
+          )}
+          <button onClick={() => {
+            setIsNotificationOpen(true);
+            setTimeout(()=>{
+              setIsNotificationOpen(false);
+            }, 4000);
+          }}
+          className="px-6 py-3 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors duration-300">
             See all team
           </button>
         </div>

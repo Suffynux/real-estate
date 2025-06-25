@@ -8,6 +8,7 @@ import Collections from './Components/Our Story/Collections'
 import Footer from './Components/Footer/Footer'
 import Team from './Components/Our Team/Team'
 import Services from './Components/Services/Services'
+import Notification from './Components/UnderDevelopment/Notification'
 
 
 
@@ -16,6 +17,7 @@ function App() {
 
   return (
  <>
+  {/* <Notification /> */}
 <Navbar />
 <Hero   />
 <section id='services'>
